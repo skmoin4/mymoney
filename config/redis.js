@@ -26,11 +26,11 @@
 import IORedis from 'ioredis';
 
 const redisConfig = {
-  host: 'redis-16328.crce206.ap-south-1-1.ec2.redns.redis-cloud.com',
-  port: 16328,
-  db: 0,
-  username: 'default',
-  password: 'jGlW6xVJCdRH8HQe6TIgBrfygTmFmOo1',
+  host: process.env.REDIS_HOST || '127.0.0.1',
+  port: Number(process.env.REDIS_PORT || 6379),
+  db: Number(process.env.REDIS_DB || 0),
+  username: process.env.REDIS_USERNAME || undefined,
+  password: process.env.REDIS_PASSWORD || undefined,
   lazyConnect: false,
   maxRetriesPerRequest: null, // Required by BullMQ or other queue libraries
 };
