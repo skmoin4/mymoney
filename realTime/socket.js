@@ -25,8 +25,14 @@ export async function initSocket(httpServer) {
   });
 
   // optional: use redis adapter if env configured (for multi-node)
-  if (process.env.REDIS_URL) {
-    const pubClient = new Redis(process.env.REDIS_URL);
+  if (process.env.REDIS_HOST) {
+    const pubClient = new Redis({
+      host: process.env.REDIS_HOST,
+      port: Number(process.env.REDIS_PORT || 6379),
+      username: process.env.REDIS_USERNAME || undefined,
+      password: process.env.REDIS_PASSWORD || undefined,
+      db: Number(process.env.REDIS_DB || 0),
+    });
     const subClient = pubClient.duplicate();
     io.adapter(createAdapter(pubClient, subClient));
     logger.info('Socket.IO using Redis adapter');
