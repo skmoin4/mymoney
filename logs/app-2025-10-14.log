@@ -110,3 +110,173 @@
 {"timestamp":"2025-10-14T05:11:45.017Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":38416,"service":"apmoney-server"}
 {"timestamp":"2025-10-14T05:12:00.947Z","level":"info","message":"alertsMonitor: cron started","pid":28616,"service":"apmoney-server","schedule":"*/5 * * * *"}
 {"timestamp":"2025-10-14T05:12:00.948Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:15:00.040Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:15:00.043Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:15:00.057Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:15:00.059Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:15:00.127Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:20:00.036Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:20:00.040Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:20:00.044Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:20:00.046Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:20:00.101Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:25:00.021Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:25:00.023Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:25:00.026Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:25:00.027Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:25:00.153Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:30:00.028Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:30:00.030Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:30:00.035Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:30:00.036Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:30:00.087Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:35:00.058Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:35:00.086Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:35:00.109Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:35:00.128Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:35:00.171Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:40:00.041Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:40:00.047Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:40:00.054Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:40:00.055Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:40:00.106Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:45:00.039Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:45:00.042Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:45:00.047Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:45:00.049Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:45:00.101Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:50:00.029Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:50:00.031Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:50:00.035Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:50:00.036Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:50:00.089Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:55:00.026Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:55:00.029Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:55:00.030Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T05:55:00.031Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T05:55:00.104Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:00:00.027Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:00:00.029Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:00:00.034Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:00:00.036Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:00:00.079Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:05:00.024Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:05:00.026Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:05:00.028Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:05:00.029Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:05:00.066Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:10:00.031Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:10:00.035Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:10:00.038Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:10:00.039Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:10:00.087Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:15:00.018Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:15:00.022Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:15:00.025Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:15:00.027Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:15:00.066Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:20:00.024Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:20:00.027Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:20:00.030Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:20:00.032Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:20:00.074Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:25:00.041Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:25:00.044Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:25:00.048Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:25:00.049Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:25:00.169Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:30:00.019Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:30:00.021Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:30:00.023Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:30:00.024Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:30:00.058Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:35:00.030Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:35:00.032Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:35:00.035Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:35:00.037Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:35:00.073Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:40:00.046Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:40:00.049Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:40:00.050Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:40:00.051Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:40:00.097Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:45:00.046Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:45:00.048Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:45:00.048Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:45:00.049Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:45:00.088Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:50:00.032Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:50:00.033Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:50:00.035Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:50:00.036Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:50:00.066Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:55:00.053Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:55:00.056Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:55:00.059Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T06:55:00.062Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T06:55:00.110Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:00:00.032Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:00:00.035Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:00:00.038Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:00:00.039Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:00:00.129Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:05:00.058Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:05:00.065Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:05:00.073Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:05:00.075Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:05:00.116Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:10:00.040Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:10:00.044Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:10:00.048Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:10:00.051Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:10:00.086Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:15:00.029Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:15:00.032Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:15:00.034Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:15:00.035Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:15:00.068Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:20:00.023Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:20:00.026Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:20:00.028Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:20:00.029Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:20:00.074Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:25:00.030Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:25:00.033Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:25:00.040Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:25:00.041Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:25:00.108Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:30:00.032Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:30:00.035Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:30:00.038Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T07:30:00.040Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T07:30:00.074Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T08:55:00.044Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T08:55:00.047Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T08:55:00.050Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T08:55:00.055Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T08:55:00.117Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:00:00.047Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:00:00.051Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:00:00.055Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:00:00.056Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T09:00:00.104Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:05:00.045Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:05:00.048Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:05:00.050Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:05:00.051Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T09:05:00.098Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:10:00.057Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:10:00.060Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:10:00.063Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:10:00.064Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T09:10:00.107Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:15:00.041Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:15:00.044Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:15:00.047Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:15:00.048Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T09:15:00.087Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:20:00.046Z","level":"info","message":"PendingMonitor: starting","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:20:00.050Z","level":"info","message":"alertsMonitor: running check","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:20:00.053Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28616,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T09:20:00.054Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28616,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T09:20:00.091Z","level":"info","message":"alertsMonitor: done","pid":28616,"service":"apmoney-server"}
