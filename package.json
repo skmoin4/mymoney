@@ -9,7 +9,6 @@
   "scripts": {
     "start": "nodemon index.js",
     "dev": "nodemon index.js",
-    "build": "cd ../client && npm run build && xcopy dist ../apmoney/dist /E /I /Y",
     "test": "mocha --recursive --exit",
     "test:concurrency": "node tests/concurrency_reserve_test.js",
     "test:mock-topup": "node scripts/e2e_topup_and_webhook.mjs",
