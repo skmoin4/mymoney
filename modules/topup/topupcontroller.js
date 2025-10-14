@@ -5,10 +5,13 @@ import walletService from '../../services/walletService.js';
 import logger from '../../utils/logger.js';
 import Razorpay from 'razorpay';
 
-const razor = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET
-});
+let razor = null;
+if (process.env.RAZORPAY_KEY_ID && process.env.RAZORPAY_KEY_SECRET) {
+  razor = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET
+  });
+}
 
 /**
  * POST /api/v1/wallet/topup
@@ -34,6 +37,9 @@ export async function createTopup(req, res) {
 
     // Razorpay integration
     if (method === 'razorpay') {
+      if (!razor) {
+        return res.status(500).json({ error: 'razorpay_not_configured' });
+      }
       const numericAmount = Number(amount);
       const order = await razor.orders.create({
         amount: Math.round(numericAmount * 100), // paise
