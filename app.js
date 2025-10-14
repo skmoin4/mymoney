@@ -107,6 +107,10 @@ app.use((req, res, next) => {
 app.use('/api', routes);
 app.use(requestIdMiddleware);
 
+// Serve static files from dist folder
+app.use(express.static('dist'));
+
+
 // Health endpoints
 app.get('/health', healthHandler);
 app.get('/ready', healthHandler);
@@ -150,6 +154,15 @@ app.use((err, req, res, next) => {
 if (process.env.SENTRY_DSN) app.use(Sentry.Handlers.errorHandler());
 
 app.use(errorHandler);
+
+// Catch all handler: send back index.html for client-side routing
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api') || req.path === '/health' || req.path === '/ready' || req.path.startsWith('/metrics')) {
+    return next();
+  }
+  res.sendFile('index.html', { root: 'dist' });
+});
+
 
 // Basic root
 app.get('/', (req, res) => res.json({ ok: true, service: 'apmoney-backend' }));
