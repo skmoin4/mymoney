@@ -13,9 +13,9 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASSWORD // You'll need to set this in .env
   },
   // Add connection timeout and other options to prevent hanging
-  connectionTimeout: 5000, // 5 seconds
-  greetingTimeout: 5000,
-  socketTimeout: 10000, // 10 seconds
+  connectionTimeout: 3000, // 3 seconds
+  greetingTimeout: 3000,
+  socketTimeout: 5000, // 5 seconds
 });
 
 export async function sendOtpEmail(email, otp) {
@@ -38,7 +38,7 @@ export async function sendOtpEmail(email, otp) {
 
     // Set timeout to prevent hanging
     const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error('Email send timeout')), 10000); // 10 second timeout
+      setTimeout(() => reject(new Error('Email send timeout')), 5000); // 5 second timeout
     });
 
     await Promise.race([

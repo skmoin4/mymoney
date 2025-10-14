@@ -22,6 +22,9 @@ initSentry();
 
 const app = express();
 
+// Trust proxy for accurate IP detection (important for rate limiting)
+app.set('trust proxy', 1);
+
 // ---------------- Security Middlewares ----------------
 
 // ✅ Helmet — secure headers

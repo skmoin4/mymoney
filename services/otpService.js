@@ -63,13 +63,14 @@ export async function createAndSendOtp(phone, email = null) {
 
   // Send email if provided
   if (email) {
-    try {
-      await sendOtpEmail(email, otp);
-      logger.info("OTP email sent", { requestId, email });
-    } catch (emailErr) {
-      logger.error("Email send failed", { requestId, email, error: emailErr.message });
-      // Don't throw here, SMS might have succeeded
-    }
+    // Send email asynchronously to avoid blocking the response
+    sendOtpEmail(email, otp)
+      .then(() => {
+        logger.info("OTP email sent", { requestId, email });
+      })
+      .catch((emailErr) => {
+        logger.error("Email send failed", { requestId, email, error: emailErr.message });
+      });
   }
 
   return { requestId, ttl: OTP_TTL };
