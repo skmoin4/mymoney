@@ -3,7 +3,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import xssClean from 'xss-clean';
-import hpp from 'hpp';
+import hpp from 'hpp'; 
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import routes from './routes.js';
@@ -51,7 +51,7 @@ app.use(
 app.use(hpp());
 
 // ✅ Rate limiter (auth APIs especially)
-const authLimiter = rateLimit({
+const authLimiter = rateLimit({ 
   windowMs: 15 * 60 * 1000, // 15 min
   max: 10, // 10 requests per IP per 15 min
   message: { error: 'Too many requests, try again later.' },
