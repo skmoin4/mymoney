@@ -24,6 +24,9 @@ const transporter = nodemailer.createTransport({
 
 export async function sendOtpEmail(email, otp) {
   try {
+    // Check if we're in production/server environment
+    const isProduction = process.env.NODE_ENV === 'development';
+
     const mailOptions = {
       from: 'skmoeen1436@gmail.com',
       to: email,
@@ -36,6 +39,7 @@ export async function sendOtpEmail(email, otp) {
           <h1 style="color: #007bff; font-size: 32px; letter-spacing: 5px;">${otp}</h1>
           <p>This code will expire in 5 minutes.</p>
           <p>If you didn't request this code, please ignore this email.</p>
+          <p>Environment: ${isProduction ? 'Production' : 'Development'}</p>
         </div>
       `
     };
@@ -50,13 +54,14 @@ export async function sendOtpEmail(email, otp) {
       timeoutPromise
     ]);
 
-    logger.info('OTP email sent successfully', { email });
+    logger.info('OTP email sent successfully', { email, environment: isProduction ? 'production' : 'development' });
   } catch (error) {
     logger.error('Failed to send OTP email', {
       email,
       error: error.message,
       code: error.code,
-      command: error.command
+      command: error.command,
+      environment: process.env.NODE_ENV
     });
     throw error;
   }
