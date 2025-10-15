@@ -468,3 +468,26 @@
 {"timestamp":"2025-10-14T11:20:00.326Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":27552,"service":"apmoney-server","err":"provider.getStatus is not a function"}
 {"timestamp":"2025-10-14T11:20:01.861Z","level":"info","message":"alertsMonitor: done","pid":27552,"service":"apmoney-server"}
 {"timestamp":"2025-10-14T11:23:55.684Z","level":"info","message":"Socket.IO using Redis adapter","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:23:56.215Z","level":"info","message":"alertsMonitor: cron started","pid":28944,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-14T11:23:56.216Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:25:00.067Z","level":"info","message":"PendingMonitor: starting","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:25:00.074Z","level":"info","message":"alertsMonitor: running check","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:25:00.256Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:25:00.259Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28944,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T11:25:08.723Z","level":"info","message":"alertsMonitor: done","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:30:00.034Z","level":"info","message":"PendingMonitor: starting","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:30:00.038Z","level":"info","message":"alertsMonitor: running check","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:30:00.593Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:30:00.594Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":28944,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T11:30:03.050Z","level":"info","message":"alertsMonitor: done","pid":28944,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:32:09.073Z","level":"info","message":"Socket.IO using Redis adapter","pid":29140,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:32:09.945Z","level":"info","message":"alertsMonitor: cron started","pid":29140,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-14T11:32:09.946Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":29140,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:32:23.159Z","level":"info","message":"Socket.IO using Redis adapter","pid":38488,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:32:23.730Z","level":"info","message":"alertsMonitor: cron started","pid":38488,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-14T11:32:23.730Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":38488,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:35:00.016Z","level":"info","message":"PendingMonitor: starting","pid":38488,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:35:00.018Z","level":"info","message":"alertsMonitor: running check","pid":38488,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:35:00.227Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":38488,"service":"apmoney-server"}
+{"timestamp":"2025-10-14T11:35:00.228Z","level":"error","message":"PendingMonitor: txn day17-order-002 check failed","pid":38488,"service":"apmoney-server","err":"provider.getStatus is not a function"}
+{"timestamp":"2025-10-14T11:35:09.373Z","level":"info","message":"alertsMonitor: done","pid":38488,"service":"apmoney-server"}

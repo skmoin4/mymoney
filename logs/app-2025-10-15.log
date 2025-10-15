@@ -1,0 +1,82 @@
+{"timestamp":"2025-10-15T09:22:15.319Z","level":"info","message":"Socket.IO using Redis adapter","pid":28888,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:22:16.161Z","level":"info","message":"alertsMonitor: cron started","pid":28888,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:22:16.163Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":28888,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:23:01.926Z","level":"info","message":"Socket.IO using Redis adapter","pid":26040,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:23:03.144Z","level":"info","message":"alertsMonitor: cron started","pid":26040,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:23:03.144Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":26040,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:25:01.740Z","level":"info","message":"Socket.IO using Redis adapter","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:25:02.507Z","level":"info","message":"alertsMonitor: cron started","pid":26232,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:25:02.508Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:30:00.052Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:30:00.057Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:30:00.401Z","level":"info","message":"PendingMonitor: found 1 pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:30:02.054Z","level":"info","message":"Txn day17-order-002 auto-finalized success","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:30:03.068Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:35:00.058Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:35:00.063Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:35:00.210Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:35:02.435Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:40:00.040Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:40:00.042Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:40:00.117Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:40:02.051Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:45:00.040Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:45:00.043Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:45:00.167Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:45:01.900Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:50:00.039Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:50:00.042Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:50:00.191Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:50:01.795Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:55:00.034Z","level":"info","message":"PendingMonitor: starting","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:55:00.039Z","level":"info","message":"alertsMonitor: running check","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:55:00.106Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:55:02.083Z","level":"info","message":"alertsMonitor: done","pid":26232,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:58:05.676Z","level":"info","message":"Socket.IO using Redis adapter","pid":22020,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:58:06.495Z","level":"info","message":"alertsMonitor: cron started","pid":22020,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:58:06.497Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":22020,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:58:07.901Z","level":"info","message":"SMTP transporter verified","pid":22020,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T09:58:46.984Z","level":"info","message":"Socket.IO using Redis adapter","pid":17412,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:58:47.576Z","level":"info","message":"alertsMonitor: cron started","pid":17412,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:58:47.577Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":17412,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:58:48.743Z","level":"info","message":"SMTP transporter verified","pid":17412,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T09:59:08.316Z","level":"info","message":"Socket.IO using Redis adapter","pid":33248,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:59:08.879Z","level":"info","message":"alertsMonitor: cron started","pid":33248,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:59:08.880Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":33248,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:59:10.288Z","level":"info","message":"SMTP transporter verified","pid":33248,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T09:59:15.660Z","level":"info","message":"Socket.IO using Redis adapter","pid":16328,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:59:16.233Z","level":"info","message":"alertsMonitor: cron started","pid":16328,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:59:16.234Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":16328,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:59:17.399Z","level":"info","message":"SMTP transporter verified","pid":16328,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T09:59:45.314Z","level":"info","message":"Socket.IO using Redis adapter","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T09:59:47.097Z","level":"info","message":"SMTP transporter verified","pid":30696,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T09:59:47.168Z","level":"info","message":"alertsMonitor: cron started","pid":30696,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T09:59:47.169Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:00.046Z","level":"info","message":"PendingMonitor: starting","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:00.050Z","level":"info","message":"alertsMonitor: running check","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:00.574Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:02.206Z","level":"info","message":"alertsMonitor: done","pid":30696,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:09.876Z","level":"info","message":"Socket.IO using Redis adapter","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:11.988Z","level":"info","message":"alertsMonitor: cron started","pid":4300,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T10:00:11.989Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:00:11.991Z","level":"info","message":"SMTP transporter verified","pid":4300,"service":"apmoney-server","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T10:00:45.072Z","level":"info","message":"http_request_start","pid":4300,"service":"apmoney-server","method":"POST","url":"/api/v1/auth/request-otp","ip":"::1"}
+{"timestamp":"2025-10-15T10:00:45.599Z","level":"info","message":"Creating OTP request","pid":4300,"service":"apmoney-server","requestId":"22a7b758-d6fd-440c-ae7c-088f0ed0d864","phone":"+917020318629","email":"smoin4425@gmail.com"}
+{"timestamp":"2025-10-15T10:00:45.602Z","level":"info","message":"OTP (dev only)","pid":4300,"service":"apmoney-server","requestId":"22a7b758-d6fd-440c-ae7c-088f0ed0d864","phone":"+917020318629","masked":"****35"}
+{"timestamp":"2025-10-15T10:00:45.627Z","level":"info","message":"SMTP resolved","pid":4300,"service":"apmoney-server","host":"smtp.gmail.com","ips":["74.125.24.109"]}
+{"timestamp":"2025-10-15T10:00:45.629Z","level":"info","message":"Attempting to send OTP email","pid":4300,"service":"apmoney-server","attempt":1,"to":"smoin4425@gmail.com","host":"smtp.gmail.com","port":587}
+{"timestamp":"2025-10-15T10:00:49.799Z","level":"info","message":"OTP email sent","pid":4300,"service":"apmoney-server","to":"smoin4425@gmail.com","messageId":"<d33cce47-633a-ed6c-a7f1-32366a1d32e2@gmail.com>","attempt":1}
+{"timestamp":"2025-10-15T10:00:49.801Z","level":"info","message":"OTP email sent","pid":4300,"service":"apmoney-server","requestId":"22a7b758-d6fd-440c-ae7c-088f0ed0d864","email":"smoin4425@gmail.com"}
+{"timestamp":"2025-10-15T10:01:05.888Z","level":"info","message":"http_request_start","pid":4300,"service":"apmoney-server","method":"POST","url":"/api/v1/auth/verify-otp","ip":"::1"}
+{"timestamp":"2025-10-15T10:01:05.891Z","level":"info","message":"Starting verifyOtp","pid":4300,"service":"apmoney-server","phone":"+917020318629","request_id":"22a7b758-d6fd-440c-ae7c-088f0ed0d864"}
+{"timestamp":"2025-10-15T10:01:07.732Z","level":"info","message":"User exists, logging in","pid":4300,"service":"apmoney-server","phone":"+917020318629","user_id":6}
+{"timestamp":"2025-10-15T10:01:08.066Z","level":"info","message":"http_request_start","pid":4300,"service":"apmoney-server","method":"GET","url":"/api/v1/admin/dashboard/summary","ip":"::1"}
+{"timestamp":"2025-10-15T10:01:13.164Z","level":"info","message":"http_request_start","pid":4300,"service":"apmoney-server","method":"GET","url":"/api/v1/admin/dashboard/summary","ip":"::1"}
+{"timestamp":"2025-10-15T10:05:00.037Z","level":"info","message":"PendingMonitor: starting","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:00.040Z","level":"info","message":"alertsMonitor: running check","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:00.592Z","level":"info","message":"PendingMonitor: no stale pending txns","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:02.784Z","level":"info","message":"alertsMonitor: done","pid":4300,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:09.148Z","level":"info","message":"Socket.IO using Redis adapter","pid":8048,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:09.968Z","level":"info","message":"alertsMonitor: cron started","pid":8048,"service":"apmoney-server","schedule":"*/5 * * * *"}
+{"timestamp":"2025-10-15T10:05:09.969Z","level":"info","message":"Cron jobs started - pending monitor and alerts monitor running","pid":8048,"service":"apmoney-server"}
+{"timestamp":"2025-10-15T10:05:10.999Z","level":"info","message":"SMTP transporter verified","pid":8048,"service":"apmoney-server","host":"smtp.gmail.com","port":587}

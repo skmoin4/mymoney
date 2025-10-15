@@ -30,7 +30,7 @@ export async function runPendingMonitor() {
 
   for (const txn of rows) {
     try {
-      const provider = providerFactory.get(txn.provider_id || 'mock');
+      const provider = await providerFactory.get(txn.provider_id || 'mock');
       const statusResp = await provider.getStatus(txn);
 
       if (statusResp.status === 'success') {
