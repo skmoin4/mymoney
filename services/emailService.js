@@ -71,78 +71,71 @@
 //   }
 // }
 
- // mailer.js
-import nodemailer from 'nodemailer';
-import dns from 'dns/promises';
 import dotenv from 'dotenv';
 import logger from '../utils/logger.js';
 
 dotenv.config();
 
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
-const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
-const SMTP_USER = process.env.SMTP_USER || 'skmoeen1436@gmail.com';
-const SMTP_PASS = process.env.SMTP_PASS || process.env.EMAIL_PASSWORD || 'zyivxdcfgondbong';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE_ENV === 'production';
 
-// Create transporter with sane options
-const transporter = nodemailer.createTransport({
-  host: SMTP_HOST,
-  port: SMTP_PORT,
-  secure: SMTP_PORT === 465, // true for 465
-  auth: {
-    user: SMTP_USER,
-    pass: SMTP_PASS
-  },
-  pool: true,                // reuse connections
-  maxConnections: 5,
-  maxMessages: 1000,
-  // timeouts (ms)
-  connectionTimeout: 20000,  // connect timeout
-  greetingTimeout: 10000,    // wait for SMTP server greeting
-  socketTimeout: 60000,      // read/write socket timeout
-  requireTLS: SMTP_PORT === 587 // use STARTTLS on 587
-});
+// Railway deployment - use SendGrid for better reliability
+let emailService;
 
-// Verify on startup to get early failure info
-async function verifyTransporter() {
+if (IS_PRODUCTION && process.env.SENDGRID_API_KEY) {
+  // Production: Use SendGrid (recommended for Railway)
   try {
-    await transporter.verify();
-    logger.info('SMTP transporter verified', { host: SMTP_HOST, port: SMTP_PORT });
+    const sgMail = (await import('@sendgrid/mail')).default;
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    emailService = 'sendgrid';
+    logger.info('Email service initialized with SendGrid');
   } catch (err) {
-    logger.error('SMTP verify failed', { host: SMTP_HOST, port: SMTP_PORT, message: err.message, code: err.code });
-    // don't throw here - allow app to start but keep logs for ops
+    logger.warn('SendGrid not available, falling back to nodemailer', { error: err.message });
+    emailService = 'nodemailer';
   }
-}
-verifyTransporter();
-
-// small helper: exponential backoff
-function wait(ms) {
-  return new Promise(res => setTimeout(res, ms));
+} else {
+  emailService = 'nodemailer';
 }
 
-async function resolveHost(host) {
-  try {
-    const addrs = await dns.lookup(host, { all: true });
-    const ips = addrs.map(a => a.address);
-    return ips;
-  } catch (err) {
-    logger.warn('DNS lookup failed', { host, message: err.message });
-    return [];
-  }
+// Fallback nodemailer configuration for development/local
+let transporter = null;
+if (emailService === 'nodemailer') {
+  const nodemailer = (await import('nodemailer')).default;
+
+  const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
+  const SMTP_USER = process.env.SMTP_USER || 'skmoeen1436@gmail.com';
+  const SMTP_PASS = process.env.SMTP_PASS || process.env.EMAIL_PASSWORD || 'zyivxdcfgondbong';
+
+  transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_PORT === 465,
+    auth: {
+      user: SMTP_USER,
+      pass: SMTP_PASS
+    },
+    // Conservative settings for Railway
+    pool: true,
+    maxConnections: 2,
+    maxMessages: 50,
+    connectionTimeout: 30000,
+    greetingTimeout: 15000,
+    socketTimeout: 60000,
+    requireTLS: SMTP_PORT === 587,
+    tls: {
+      rejectUnauthorized: false,
+      minVersion: 'TLSv1.2'
+    }
+  });
 }
 
 /**
  * sendOtpEmail(email, otp, options)
- * - retries with exponential backoff on transient errors (like ETIMEDOUT)
+ * - Uses SendGrid in production (Railway), nodemailer in development
  */
 export async function sendOtpEmail(email, otp, { maxRetries = 3 } = {}) {
-  const resolvedIps = await resolveHost(SMTP_HOST);
-  logger.info('SMTP resolved', { host: SMTP_HOST, ips: resolvedIps });
-
   const mailOptions = {
-    from: SMTP_USER,
     to: email,
     subject: 'Your OTP Code',
     text: `Your OTP code is: ${otp}. This code will expire in 5 minutes.`,
@@ -158,48 +151,67 @@ export async function sendOtpEmail(email, otp, { maxRetries = 3 } = {}) {
     `
   };
 
-  let attempt = 0;
-  let lastErr = null;
+  if (emailService === 'sendgrid' && IS_PRODUCTION) {
+    // Use SendGrid for Railway production
+    const sgMail = (await import('@sendgrid/mail')).default;
+    const msg = {
+      to: email,
+      from: process.env.FROM_EMAIL || 'noreply@yourdomain.com', // Set this in Railway env vars
+      subject: mailOptions.subject,
+      text: mailOptions.text,
+      html: mailOptions.html
+    };
 
-  while (attempt <= maxRetries) {
     try {
-      attempt += 1;
-      logger.info('Attempting to send OTP email', { attempt, to: email, host: SMTP_HOST, port: SMTP_PORT });
-
-      // transporter.sendMail returns a Promise
-      const info = await transporter.sendMail(mailOptions);
-
-      // success
-      logger.info('OTP email sent', { to: email, messageId: info.messageId, attempt });
-      return info;
-    } catch (err) {
-      lastErr = err;
-      // Log full socket-level details (but never log passwords)
-      logger.error('Failed to send OTP email attempt', {
-        attempt,
+      const result = await sgMail.send(msg);
+      logger.info('OTP email sent via SendGrid', { to: email, messageId: result[0]?.headers?.['x-message-id'] });
+      return result;
+    } catch (error) {
+      logger.error('SendGrid email failed', {
         to: email,
-        message: err.message,
-        code: err.code,
-        errno: err.errno,
-        syscall: err.syscall,
-        command: err.command
+        error: error.message,
+        code: error.code
       });
-
-      // If it's unrecoverable (auth failure, invalid recipient format), bail out immediately
-      const nonRetryable = ['EAUTH', 'EENVELOPE', 'ERR_INVALID_ARG_TYPE'].includes(err.code) || (err.response && /Authentication|Invalid/.test(err.response));
-      if (nonRetryable) throw err;
-
-      // If last attempt, break and throw
-      if (attempt > maxRetries) break;
-
-      // Exponential backoff: base 1000ms * 2^(attempt-1)
-      const delay = Math.min(30000, 1000 * Math.pow(2, attempt - 1));
-      logger.info('Will retry sendMail after backoff', { attempt, delayMs: delay });
-      await wait(delay);
+      throw error;
     }
-  }
+  } else {
+    // Fallback to nodemailer for development
+    mailOptions.from = process.env.SMTP_USER || 'skmoeen1436@gmail.com';
 
-  // after retries
-  logger.error('All retries exhausted for OTP email', { to: email, attempts: attempt, lastMessage: lastErr && lastErr.message, code: lastErr && lastErr.code });
-  throw lastErr || new Error('Failed to send email - unknown error');
+    let attempt = 0;
+    let lastErr = null;
+
+    while (attempt <= maxRetries) {
+      try {
+        attempt += 1;
+        logger.info('Attempting to send OTP email via nodemailer', { attempt, to: email });
+
+        const info = await transporter.sendMail(mailOptions);
+        logger.info('OTP email sent via nodemailer', { to: email, messageId: info.messageId, attempt });
+        return info;
+      } catch (err) {
+        lastErr = err;
+        logger.error('Failed to send OTP email attempt', {
+          attempt,
+          to: email,
+          message: err.message,
+          code: err.code
+        });
+
+        if (attempt > maxRetries) break;
+
+        // Simple backoff
+        const delay = Math.min(10000, 1000 * attempt);
+        await new Promise(res => setTimeout(res, delay));
+      }
+    }
+
+    logger.error('All retries exhausted for OTP email', {
+      to: email,
+      attempts: attempt,
+      lastMessage: lastErr?.message,
+      code: lastErr?.code
+    });
+    throw lastErr || new Error('Failed to send email');
+  }
 }
