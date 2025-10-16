@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import { query, getPool } from "../config/db.js";
 
 import { sendOtpSms } from "../utils/smsProvider.js";
-import { sendOtpEmail } from "./emailService.js";
 import logger from '../utils/logger.js';
 dotenv.config();
 
@@ -29,7 +28,7 @@ export function hashOtp(otp, requestId) {
 /**
  * Save OTP row into DB. We don't store raw OTP.
  */
-export async function createAndSendOtp(phone, email = null) {
+export async function createAndSendOtp(phone) {
   const requestId = uuidv4();
   const otp = generateOtp(); // raw OTP only in memory (never logged)
   const otpHash = hashOtp(otp, requestId);
@@ -40,38 +39,40 @@ export async function createAndSendOtp(phone, email = null) {
                VALUES (?, ?, ?, ?, 0, 0, NOW())`;
   try {
     await query(sql, [requestId, phone, otpHash, expiresAt]);
-    logger.info("Creating OTP request", { requestId, phone, email });
+    logger.info("Creating OTP request", { requestId, phone });
   } catch (err) {
     console.error("Failed to insert OTP row", err);
     throw err;
   }
 
-  // Send SMS (mock)
+  // Send SMS via Fast2SMS
   try {
-    await sendOtpSms(phone, otp);
-    if (process.env.NODE_ENV !== "production") {
-      logger.info("OTP (dev only)", {
+    const smsResult = await sendOtpSms(phone, otp);
+    if (smsResult.ok) {
+      logger.info("OTP SMS sent successfully", {
         requestId,
         phone,
-        masked: `****${String(otp).slice(-2)}`,
+        messageId: smsResult.messageId,
+        credits: smsResult.credits
       });
+    } else {
+      logger.error("OTP SMS send failed", {
+        requestId,
+        phone,
+        error: smsResult.error
+      });
+      // SMS failed, but continue with email if available
     }
   } catch (smsErr) {
-    // If SMS fails, you may want to delete the OTP row or leave it for manual retry
-    console.error("SMS send failed (mock)", smsErr);
+    logger.error("SMS send error", {
+      requestId,
+      phone,
+      error: smsErr.message
+    });
+    // SMS failed, but continue with email if available
   }
 
-  // Send email if provided
-  if (email) {
-    // Send email asynchronously to avoid blocking the response
-    sendOtpEmail(email, otp)
-      .then(() => {
-        logger.info("OTP email sent", { requestId, email });
-      })
-      .catch((emailErr) => {
-        logger.error("Email send failed", { requestId, email, error: emailErr.message });
-      });
-  }
+  // Email removed - only SMS OTP now
 
   return { requestId, ttl: OTP_TTL };
 }

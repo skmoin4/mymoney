@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import { initSocket } from './realTime/socket.js';
 import { initializeSuperAdminWallet } from './services/superAdminWalletService.js';
 import { startCrons } from './cron/cronManager.js';
-dotenv.config();
+dotenv.config(); 
 
 const PORT = Number(process.env.PORT || 4001);
 

@@ -66,15 +66,24 @@ Admin-only endpoints require user to have 'admin' role.
 Base Path: `/v1/auth`
 
 ### 1. Request OTP
-**Endpoint:** `POST /v1/auth/request-otp`  
-**Authentication:** None  
-**Rate Limited:** Yes  
-**Description:** Request OTP for phone number authentication.
+**Endpoint:** `POST /v1/auth/request-otp`
+**Authentication:** None
+**Rate Limited:** Yes
+**Description:** Request OTP for phone number authentication. OTP is sent via SMS (Fast2SMS) and email if provided.
 
 **Request Body:**
 ```json
 {
   "phoneNumber": "+1234567890"
+}
+```
+
+**Response:**
+```json
+{
+  "requestId": "uuid_here",
+  "ttl": 300,
+  "message": "OTP sent successfully"
 }
 ```
 
@@ -959,6 +968,33 @@ Response includes pagination metadata:
 
 ---
 
+## SMS Integration
+
+The system uses Twilio for OTP delivery via SMS. Configure the following environment variables:
+
+```
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE_NUMBER=+1234567890  # Your Twilio phone number
+```
+
+### SMS Features:
+- OTP delivery via SMS ($0.03-0.05 per SMS to India)
+- Automatic phone number formatting (+91 prefix handling)
+- Delivery status tracking
+- Fallback to email if SMS fails
+- Development mode logging (no actual SMS sent)
+
+### SMS Response Format:
+```json
+{
+  "ok": true,
+  "messageId": "SMxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "status": "queued",
+  "price": "-0.00750"
+}
+```
+
 ## Notes
 
 1. All timestamps are in ISO 8601 format (UTC)
@@ -967,6 +1003,7 @@ Response includes pagination metadata:
 4. Admin endpoints require admin role in JWT token
 5. Some endpoints may have additional validation rules
 6. Test endpoints should not be used in production
+7. SMS OTP is sent via Fast2SMS service
 
 ---
 
