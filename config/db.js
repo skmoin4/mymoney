@@ -31,11 +31,11 @@
 import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool({
-  host: "shortline.proxy.rlwy.net",
-  user: "root",
-  password: "UzkNQbiofsskGdnFflYVuEevkzKbTxVH",
-  database: "railway",
-  port: 59203,
+  host: "b6c0bhsugeqnd3fti6fg-mysql.services.clever-cloud.com",
+  user: "u8zfrovotpmwinoj",
+  password: "8HiwM5EKqhLupHzm2Pfo",
+  database: "b6c0bhsugeqnd3fti6fg",
+  port: 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
