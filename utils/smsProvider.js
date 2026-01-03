@@ -6,8 +6,8 @@ import logger from '../utils/logger.js';
 dotenv.config();
 
 const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID || 'AC48d5ad19800548f824c710c8acd1419d';
-const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN || 'a234ea17a0c3e9ab0423f86d2f0cfcfd';
-const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER || '+1234567890'; // Replace with actual Twilio number
+const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN || '6489957e69a2fc685221c56ffe489feb';
+const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER || '+12708124820'; // Replace with actual Twilio number
 
 // Initialize Twilio client
 const twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
